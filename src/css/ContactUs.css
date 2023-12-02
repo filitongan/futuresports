@@ -1,0 +1,102 @@
+.main-content-contact-us {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 70px;
+  margin-right: 70px;
+  color: #19204e;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+}
+
+.right-section {
+  margin-left: 60px;
+  justify-content: center;
+  text-align: center;
+}
+
+.left-section-title {
+  color: #19204e;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+  justify-content: center;
+}
+
+.right-section-title {
+  color: #19204e;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.form {
+  max-width: 900px;
+  width: 100%;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form select,
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+  border: 1px black solid;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+#message-input {
+  padding-bottom: 100px;
+}
+
+#submit-btn {
+  background-color: #19204e;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 100%;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+}
+
+#submit-btn:hover {
+  background-color: #d6d6d6;
+  color: black;
+}
+
+#email-validation,
+#message-validation {
+  color: red;
+  text-align: left;
+}

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: BebasNeue;
+  src: url(../../fonts/BebasNeue-Regular.ttf);
+}
+
+.section-title {
+  font-family: BebasNeue;
+  color: #19204e;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.main-content {
+  margin-left: 70px;
+  margin-right: 70px;
+  color: #19204e;
+}
+
+.video-section {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  margin-top: 80px;
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-bottom: 100px;
+}
+
+.title {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 400;
+}
