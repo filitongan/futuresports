@@ -1,7 +1,62 @@
+import React, { useState } from "react";
 import Banner from "../components/Banner";
 import "../css/ContactUs.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactUs() {
+  const [enquiryType, setEnquiryType] = useState("Fan Feedback");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [emailValidation, setEmailValidation] = useState("");
+  const [messageValidation, setMessageValidation] = useState("");
+
+  const handleEnquiryTypeChange = (e) => {
+    setEnquiryType(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setEmailValidation("");
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+    setMessageValidation("");
+  };
+
+  const validateAndSubmit = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
+
+    if (!emailRegex.test(email)) {
+      setEmailValidation(
+        "Invalid email format! Please enter an email with format like: myemail@gmail.com"
+      );
+      return;
+    }
+
+    if (message.length > 500) {
+      setMessageValidation("Message must be under 500 characters!");
+      return;
+    }
+
+    if (message.length < 1) {
+      setMessageValidation("Message must be more than one character!");
+      return;
+    }
+
+    toast.success("Message Sent!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
   return (
     <>
       <Banner bannerText="CONTACT US" page="contactus" />
@@ -42,31 +97,38 @@ export default function ContactUs() {
           </div>
           <div className="form">
             <label htmlFor="dropdown">Your Enquiry Type:</label>
-            <select id="dropdown">
-              <option value="option1">Fan Feedback</option>
-              <option value="option2">Ticket Enquiries</option>
-              <option value="option3">Other</option>
+            <select
+              id="dropdown"
+              onChange={handleEnquiryTypeChange}
+              value={enquiryType}
+            >
+              <option value="Fan Feedback">Fan Feedback</option>
+              <option value="Ticket Enquiries">Ticket Enquiries</option>
+              <option value="Other">Other</option>
             </select>
             <label htmlFor="email-input">Your Email:</label>
-            <p id="email-validation"></p>
+            <p id="email-validation">{emailValidation}</p>
             <input
               type="text"
               id="email-input"
               placeholder="Enter your email here..."
+              onChange={handleEmailChange}
             />
             <label htmlFor="message-input">Your Message:</label>
-            <p id="message-validation"></p>
+            <p id="message-validation">{messageValidation}</p>
             <input
               type="text"
               id="message-input"
               placeholder="Enter your message here..."
+              onChange={handleMessageChange}
             />
-            <button id="submit-btn" onclick="validateAndSubmit()" type="submit">
+            <button id="submit-btn" onClick={validateAndSubmit} type="submit">
               Send Message
             </button>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 }
