@@ -1,6 +1,22 @@
-export default function PlaceholderText() {
+export default function PlaceholderText({ searchResults }) {
+  let faqContent = document.querySelectorAll(".faq-section p");
+
+  faqContent.forEach(function (paragraph) {
+    let text = paragraph.textContent.toLowerCase();
+    if (text.includes(searchResults)) {
+      paragraph.innerHTML = paragraph.textContent.replace(
+        new RegExp(searchResults, "gi"),
+        function (match) {
+          return '<span class="highlighted">' + match + "</span>";
+        }
+      );
+    } else {
+      paragraph.innerHTML = paragraph.textContent;
+    }
+  });
+
   return (
-    <>
+    <div className="faq-section">
       <div className="main-content">
         <div className="section">
           <div className="subsection">
@@ -92,6 +108,6 @@ export default function PlaceholderText() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

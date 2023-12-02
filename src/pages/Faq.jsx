@@ -1,8 +1,16 @@
 import Banner from "../components/Banner";
 import PlaceholderText from "../components/PlaceholderText";
 import "../css/Faq.css";
+import { useState } from "react";
 
 export default function Faq() {
+  const [search, setSearch] = useState("");
+  const [searchResults, setSearchResults] = useState("");
+
+  function handleSearch() {
+    setSearchResults(search);
+  }
+
   return (
     <>
       <Banner bannerText="FREQUENTLY ASKED QUESTIONS" page="faq" />
@@ -11,13 +19,20 @@ export default function Faq() {
           <p>HOW CAN WE HELP</p>
         </div>
         <div className="search-bar">
-          <input id="searchInput" type="text" placeholder="Search..." />
-          <button id="searchButton" type="submit">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button id="searchButton" type="button" onClick={handleSearch}>
             SEARCH
           </button>
         </div>
       </div>
-      <PlaceholderText />
+
+      <PlaceholderText searchResults={searchResults} />
     </>
   );
 }
