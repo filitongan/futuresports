@@ -39,28 +39,36 @@
 .navLinksMobile {
   display: none;
   flex-direction: column;
-  background-color: #d6d6d6;
+  background-color: #19204e;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navLinksMobile a {
-  color: black;
+  color: #fff;
   text-decoration: none;
-  padding: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
   text-align: center;
 }
 
 .navLinksMobile a:hover {
-  color: white;
-  background-color: #444444;
+  text-decoration: underline;
+  text-decoration-color: #fcb300;
+  text-decoration-thickness: 6px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1302px) {
   .navLinks {
     display: none;
   }
 
   .navLinksMobile {
     display: flex;
+  }
+  .logo {
+    align-items: center;
   }
 }
 

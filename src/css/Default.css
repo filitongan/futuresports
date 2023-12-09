@@ -17,6 +17,7 @@
   margin-left: 70px;
   margin-right: 70px;
   color: #19204e;
+  overflow-x: auto;
 }
 
 .video-section {
@@ -30,6 +31,15 @@
   margin-left: 120px;
   margin-right: 120px;
   margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .section {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .title {
