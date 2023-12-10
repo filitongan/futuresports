@@ -14,6 +14,7 @@ import video4 from "../assets/images/homepage/video_4.png";
 import rightArrow from "../assets/images/homepage/right_arrow.png";
 import { Link } from "react-router-dom";
 import PhotoGallery from "../components/PhotoGallery";
+import WeatherInformation from "../components/WeatherInformation";
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
       <div className="banner">
         <PhotoGallery />
       </div>
+
+      <WeatherInformation />
 
       <div className="upcoming-matches">
         <h2 className="section-title">UPCOMING MATCHES</h2>
