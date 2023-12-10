@@ -13,7 +13,7 @@ export default function PhotoGallery() {
       <Carousel>
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Banner ${index}`} />
+            <img src={image} alt={`Banner ${index + 1}`} />
           </div>
         ))}
       </Carousel>
