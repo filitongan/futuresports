@@ -2,6 +2,7 @@ import "../css/Team.css";
 import Banner from "../components/Banner";
 import TeamTable from "../components/TeamTable";
 
+//Team page
 export default function Team() {
   return (
     <>

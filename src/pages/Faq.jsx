@@ -3,10 +3,13 @@ import PlaceholderText from "../components/PlaceholderText";
 import "../css/Faq.css";
 import { useState } from "react";
 
+//Faq page
 export default function Faq() {
+  //setup required states
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState("");
 
+  //function that handles search button click and sets search results to pass to placeholder text component
   function handleSearch() {
     setSearchResults(search);
   }

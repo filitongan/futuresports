@@ -4,27 +4,34 @@ import "../css/ContactUs.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+//Contact us page
 export default function ContactUs() {
+  //setup required states
   const [enquiryType, setEnquiryType] = useState("Fan Feedback");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailValidation, setEmailValidation] = useState("");
   const [messageValidation, setMessageValidation] = useState("");
 
+  //function that handles dropdown menu selection
   function handleEnquiryTypeChange(e) {
     setEnquiryType(e.target.value);
   }
 
+  //function that handles email input change
   function handleEmailChange(e) {
     setEmail(e.target.value);
     setEmailValidation("");
   }
 
+  //function that handles message input change
   function handleMessageChange(e) {
     setMessage(e.target.value);
     setMessageValidation("");
   }
 
+  //function that validates input then submits / shows success message if all inputs are valid
+  //if inputs are not valid, it will set the validation error to show to the user
   function validateAndSubmit() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
 

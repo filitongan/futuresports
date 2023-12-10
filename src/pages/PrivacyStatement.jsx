@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import PlaceholderText from "../components/PlaceholderText";
 
+//Privacy statement page
 export default function PrivacyStatement() {
   return (
     <>

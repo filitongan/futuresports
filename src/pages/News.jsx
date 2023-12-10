@@ -20,6 +20,7 @@ import {
 } from "../assets/images";
 import { Link } from "react-router-dom";
 
+//News page
 export default function News() {
   return (
     <>

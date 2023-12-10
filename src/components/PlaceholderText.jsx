@@ -1,6 +1,7 @@
+//Placeholder text component
 export default function PlaceholderText({ searchResults }) {
+  //javascript that allows searched text to be highlighted after submitting search
   let faqContent = document.querySelectorAll(".faq-section p");
-
   faqContent.forEach(function (paragraph) {
     let text = paragraph.textContent.toLowerCase();
     if (text.includes(searchResults.toLowerCase())) {

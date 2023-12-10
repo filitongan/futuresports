@@ -1,5 +1,6 @@
 import { teamData } from "../helpers/team.js";
 
+//Team table component
 export default function TeamTable() {
   return (
     <div className="table-section">

@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import video from "../assets/videos/video_1.mov";
 
+//Video page
 export default function Video() {
   return (
     <>

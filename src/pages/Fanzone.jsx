@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import Forum from "../components/Forum";
 
+//Fanzone page
 export default function Fanzone() {
   return (
     <>

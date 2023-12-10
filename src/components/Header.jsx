@@ -2,6 +2,7 @@ import "../css/Header.css";
 import logo from "../assets/images/homepage/future_community_logo.png";
 import { NavLink } from "react-router-dom";
 
+//Header component
 export default function Header() {
   return (
     <>

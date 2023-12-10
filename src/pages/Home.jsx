@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import PhotoGallery from "../components/PhotoGallery";
 import WeatherInformation from "../components/WeatherInformation";
 
+//Home page
 export default function Home() {
   return (
     <div className="main-content">

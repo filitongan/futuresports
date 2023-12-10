@@ -6,6 +6,7 @@ import fanzoneBanner from "../assets/images/banners/fanzone_banner.png";
 import newsBanner from "../assets/images/banners/news_banner.png";
 import goalpostBanner from "../assets/images/banners/goal_post_banner.png";
 
+//Banner component
 export default function Banner({ bannerText, page }) {
   let image = goalpostBanner;
 
@@ -20,6 +21,7 @@ export default function Banner({ bannerText, page }) {
     image = fanzoneBanner;
   }
 
+  //banner style
   const bannerStyle = {
     backgroundImage: `url(${image})`,
     backgroundSize: "cover",
@@ -37,6 +39,7 @@ export default function Banner({ bannerText, page }) {
   );
 }
 
+//Banner propTypes
 Banner.propTypes = {
   bannerText: PropTypes.string.isRequired,
   page: PropTypes.string.isRequired,

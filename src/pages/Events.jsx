@@ -3,6 +3,7 @@ import EventCalendar from "../components/EventCalendar";
 import "../css/Events.css";
 import { eventList } from "../helpers/events.js";
 
+//Events page
 export default function Events() {
   return (
     <>

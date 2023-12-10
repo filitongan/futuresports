@@ -1,6 +1,7 @@
 import ReactWeather from "react-open-weather";
 import { data } from "../helpers/weatherInformation";
 
+//Weather information component
 export default function WeatherInformation() {
   return (
     <div className="WeatherInformation" id="WeatherInformation">

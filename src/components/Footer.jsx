@@ -2,6 +2,7 @@ import "../css/Footer.css";
 import logo from "../assets/images/homepage/future_community_logo.png";
 import { Link } from "react-router-dom";
 
+//Footer component
 export default function Footer() {
   return (
     <>

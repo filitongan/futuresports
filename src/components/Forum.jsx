@@ -3,7 +3,9 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+//Forum component
 export default function Forum() {
+  //setup default initial post to display
   const initalPost = {
     name: "MATT",
     location: "VANCOUVER CANADA",
@@ -14,6 +16,7 @@ export default function Forum() {
     liked: false,
   };
 
+  //setup required states
   const [pollOneVotes, setPollOneVotes] = useState(1000);
   const [pollTwoVotes, setPollTwoVotes] = useState(500);
   const [pollOneVoted, setPollOneVoted] = useState(false);
@@ -27,6 +30,7 @@ export default function Forum() {
   const [posts, setPosts] = useState([initalPost]);
   const remainingCharacters = maxCharacters - text.length;
 
+  //function that handles post text input
   function handleTextInput(event) {
     const newText = event.target.value;
 
@@ -35,6 +39,7 @@ export default function Forum() {
     }
   }
 
+  //function that handles poll option selection
   function handleOptionClick(optionValue, pollNumber) {
     if (pollNumber === 1) {
       setPollOneSelectedOption(optionValue);
@@ -43,7 +48,9 @@ export default function Forum() {
     }
   }
 
+  //function that handles post button click submission
   function handlePostSubmission() {
+    //only submit if name location and text are defined, otherwise show toast error
     if (name && location && text) {
       const newPost = {
         name: name,
@@ -86,6 +93,7 @@ export default function Forum() {
     }
   }
 
+  //function that handles liking / unliking post
   function handleLike(index) {
     setPosts((prevPosts) => {
       const updatedPosts = [...prevPosts];
@@ -99,7 +107,9 @@ export default function Forum() {
     });
   }
 
+  //function that handles submitting poll vote selection
   function submitVote(voteSubmitted, pollNumber) {
+    //only allow user to vote once
     if (voteSubmitted) {
       toast.error(`Already voted!`, {
         position: "top-right",
