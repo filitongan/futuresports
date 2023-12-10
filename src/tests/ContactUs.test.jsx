@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import ContactUs from "../pages/ContactUs";
-import { waitFor } from "@testing-library/react";
 
 describe("ContactUs component", () => {
   test("renders ContactUs component", () => {
@@ -38,7 +37,6 @@ describe("ContactUs component", () => {
     const messageInput = screen.getByLabelText("Your Message:");
     const submitButton = screen.getByText("Send Message");
 
-    // Simulate user input
     fireEvent.change(emailInput, { target: { value: "invalid-email" } });
     fireEvent.change(messageInput, {
       target: { value: "Long message over 500 characters".repeat(20) },
