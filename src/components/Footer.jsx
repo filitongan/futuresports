@@ -13,13 +13,22 @@ export default function Footer() {
         </div>
         <div className="footer-layer-2">
           <a href="https://www.facebook.com/">
-            <i className="fa-brands fa-facebook-f fa-3x"></i>
+            <i
+              data-testid="facebook-icon"
+              className="fa-brands fa-facebook-f fa-3x"
+            ></i>
           </a>
           <a href="https://twitter.com/?lang=en">
-            <i className="fa-brands fa-twitter fa-3x"></i>
+            <i
+              data-testid="twitter-icon"
+              className="fa-brands fa-twitter fa-3x"
+            ></i>
           </a>
           <a href="https://www.instagram.com/">
-            <i className="fa-brands fa-instagram fa-3x"></i>
+            <i
+              data-testid="instagram-icon"
+              className="fa-brands fa-instagram fa-3x"
+            ></i>
           </a>
         </div>
         <div className="footer-layer-3">

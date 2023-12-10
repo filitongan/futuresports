@@ -46,8 +46,8 @@ export default function Forum() {
   function handlePostSubmission() {
     if (name && location && text) {
       const newPost = {
-        name: name.toUpperCase(),
-        location: location.toUpperCase(),
+        name: name,
+        location: location,
         content: text,
         postedTime: new Date().toLocaleString(), // You can format the date as needed
         likes: 0,

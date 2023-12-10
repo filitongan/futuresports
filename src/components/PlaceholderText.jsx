@@ -3,7 +3,7 @@ export default function PlaceholderText({ searchResults }) {
 
   faqContent.forEach(function (paragraph) {
     let text = paragraph.textContent.toLowerCase();
-    if (text.includes(searchResults)) {
+    if (text.includes(searchResults.toLowerCase())) {
       paragraph.innerHTML = paragraph.textContent.replace(
         new RegExp(searchResults, "gi"),
         function (match) {

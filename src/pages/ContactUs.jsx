@@ -11,51 +11,55 @@ export default function ContactUs() {
   const [emailValidation, setEmailValidation] = useState("");
   const [messageValidation, setMessageValidation] = useState("");
 
-  const handleEnquiryTypeChange = (e) => {
+  function handleEnquiryTypeChange(e) {
     setEnquiryType(e.target.value);
-  };
+  }
 
-  const handleEmailChange = (e) => {
+  function handleEmailChange(e) {
     setEmail(e.target.value);
     setEmailValidation("");
-  };
+  }
 
-  const handleMessageChange = (e) => {
+  function handleMessageChange(e) {
     setMessage(e.target.value);
     setMessageValidation("");
-  };
+  }
 
-  const validateAndSubmit = () => {
+  function validateAndSubmit() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
+
+    let hasValidationError = false;
 
     if (!emailRegex.test(email)) {
       setEmailValidation(
         "Invalid email format! Please enter an email with format like: myemail@gmail.com"
       );
-      return;
+      hasValidationError = true;
     }
 
     if (message.length > 500) {
       setMessageValidation("Message must be under 500 characters!");
-      return;
-    }
-
-    if (message.length < 1) {
+      hasValidationError = true;
+    } else if (message.length < 1) {
       setMessageValidation("Message must be more than one character!");
-      return;
+      hasValidationError = true;
     }
 
-    toast.success("Message Sent!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-  };
+    if (!hasValidationError) {
+      toast.success("Message Sent!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setEmail("");
+      setMessage("");
+    }
+  }
 
   return (
     <>
@@ -112,6 +116,7 @@ export default function ContactUs() {
               type="text"
               id="email-input"
               placeholder="Enter your email here..."
+              value={email}
               onChange={handleEmailChange}
             />
             <label htmlFor="message-input">Your Message:</label>
@@ -119,6 +124,7 @@ export default function ContactUs() {
             <input
               type="text"
               id="message-input"
+              value={message}
               placeholder="Enter your message here..."
               onChange={handleMessageChange}
             />
