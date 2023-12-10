@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/futuresports/static/css/main.db6edb91.css",
-    "main.js": "/futuresports/static/js/main.79a4a736.js",
+    "main.js": "/futuresports/static/js/main.5baf2826.js",
     "static/js/787.82a69d14.chunk.js": "/futuresports/static/js/787.82a69d14.chunk.js",
     "static/media/video_1.mov": "/futuresports/static/media/video_1.6b700a7de7b2fd7b70df.mov",
     "static/media/goal_post_banner.png": "/futuresports/static/media/goal_post_banner.a988cc5343f222111882.png",
@@ -33,11 +33,11 @@
     "static/media/BebasNeue-Regular.ttf": "/futuresports/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "index.html": "/futuresports/index.html",
     "main.db6edb91.css.map": "/futuresports/static/css/main.db6edb91.css.map",
-    "main.79a4a736.js.map": "/futuresports/static/js/main.79a4a736.js.map",
+    "main.5baf2826.js.map": "/futuresports/static/js/main.5baf2826.js.map",
     "787.82a69d14.chunk.js.map": "/futuresports/static/js/787.82a69d14.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db6edb91.css",
-    "static/js/main.79a4a736.js"
+    "static/js/main.5baf2826.js"
   ]
 }
