@@ -9,7 +9,9 @@ export default function Team() {
       <div className="main-content">
         <h2 className="section-title">MEN'S SQUAD</h2>
 
-        <TeamTable />
+        <div data-testid="team-table">
+          <TeamTable />
+        </div>
       </div>
     </>
   );

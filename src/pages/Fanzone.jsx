@@ -5,7 +5,9 @@ export default function Fanzone() {
   return (
     <>
       <Banner bannerText="WELCOME TO THE FAN ZONE" page="fanzone" />
-      <Forum />
+      <div data-testid="forum-component">
+        <Forum />
+      </div>
     </>
   );
 }

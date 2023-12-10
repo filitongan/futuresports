@@ -1,6 +1,5 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-
 import homepageBanner from "../assets/images/homepage/homepage_banner_img_1.png";
 import goalPostBanner from "../assets/images/banners/goal_post_banner.png";
 import newsBanner from "../assets/images/banners/news_banner.png";

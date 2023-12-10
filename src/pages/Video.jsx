@@ -6,9 +6,9 @@ export default function Video() {
     <>
       <Banner bannerText="VIDEO" page="video" />
       <div className="main-content">
-        <h2 className="section-title">LOREM IPSUM</h2>
+        <h2 className="section-title">VIDEO TITLE</h2>
         <div className="video-section">
-          <video width="80%" height="500" controls>
+          <video data-testid="video" width="80%" height="500" controls>
             <source src={video} />
             Your browser does not support the video tag.
           </video>

@@ -26,13 +26,20 @@ export default function Faq() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button id="searchButton" type="button" onClick={handleSearch}>
+          <button
+            data-testid="faq-search-button"
+            id="searchButton"
+            type="button"
+            onClick={handleSearch}
+          >
             SEARCH
           </button>
         </div>
       </div>
 
-      <PlaceholderText searchResults={searchResults} />
+      <div data-testid="placeholder-text">
+        <PlaceholderText searchResults={searchResults} />
+      </div>
     </>
   );
 }

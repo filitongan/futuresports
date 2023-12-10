@@ -9,7 +9,9 @@ export default function Events() {
       <Banner bannerText="UPCOMING MATCHES AND EVENTS" page="events" />
       <div className="main-content">
         <h2 className="section-title">CURRENT MONTH CALENDAR</h2>
-        <EventCalendar eventList={eventList} />
+        <div data-testid="event-calendar">
+          <EventCalendar eventList={eventList} />
+        </div>
       </div>
     </>
   );

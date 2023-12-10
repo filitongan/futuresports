@@ -1,4 +1,3 @@
-import React from "react";
 import ReactWeather from "react-open-weather";
 import { data } from "../helpers/weatherInformation";
 
